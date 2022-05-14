@@ -1,0 +1,50 @@
+.banner{
+    background-color: #4D00FF;
+    color: white;
+    margin-top: 75px;
+    text-align: center;
+    padding: 100px 0;
+}
+#small-gritty{
+    height: 100px;
+    width: 100px;
+    filter: drop-shadow(1px 1px 1px black);
+}
+#gritter{
+    color: #4D00FF;
+    font-size: 100px;
+}
+
+.bold{
+    font-weight: 900;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+.navbar li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.navbar a{
+    text-decoration: none;
+}
+#greets ul{
+    list-style-type: none;
+    padding: 0;
+}
+.greeter-section{
+    padding: 20px 50px;
+}
+.avatar{
+    background-image: url('download.jpg');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+    
