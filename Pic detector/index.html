@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Knowledgebox</title>
+    </head>
+    <body>
+        <section id="slider">
+            <div class="container">
+                <div class="subcontainer">
+                    <form name="google-sheet">
+                    <div class="slider-wrapper">
+                            <div>
+                                <h2>Identify Images</h2>
+                            </div>
+                        <br>
+                        
+                        <div class="my-slider">
+                            
+                            <div>
+                                <div class="slide">
+                                    <div>
+                                        <h3>Image 1</h3>
+                                    </div>
+                                    <div class="slide-img img-1"></div><br>
+                                    <button class="speechtxt" onclick="record1()">Click</button>
+                                    <div class="speak"><input type="text" id="speechToText1" placeholder="Please speak to type" name="Image1" required ></div>
+                                </div>
+                            </div>
+                            <br><br><br><br>
+                            <div>
+                                <div class="slide">
+                                    <div>
+                                        <h3>Image 2</h3>
+                                    </div>
+                                    <div class="slide-img img-2"></div><br>
+                                    <button class="speechtxt" onclick="record2()">Click</button>
+                                    <div class="speak"><input type="text" id="speechToText2" placeholder="Please speak to type" name="Image2" required ></div>
+                                </div>
+                            </div>
+                            <br><br><br><br>
+                            <div>
+                                <div class="slide">
+                                    <div>
+                                        <h3>Image 3</h3>
+                                    </div>
+                                    <div class="slide-img img-3"></div><br>
+                                    <button class="speechtxt" onclick="record3()">Click</button>
+                                    <div class="speak"><input type="text" id="speechToText3" placeholder="Please speak to type" name="Image3" required></div>
+                                </div>
+                            </div>
+                            <br><br><br><br>
+                            <div>
+                                <div class="slide">
+                                    <div>
+                                        <h3>Image 4</h3>
+                                    </div>
+                                    <div class="slide-img img-4"></div><br>
+                                    <button class="speechtxt" onclick="record4()">Click</button>
+                                    <div class="speak"><input type="text" id="speechToText4" placeholder="Please speak to type" name="Image4" required></div>
+                                </div>
+                            </div>
+                            <br><br><br><br>
+                            <div>
+                                <div class="slide">
+                                    <div>
+                                        <h3>Image 5</h3>
+                                    </div>
+                                    <div class="slide-img img-5"></div><br>
+                                    <button class="speechtxt" onclick="record5()">Click</button>
+                                    <div class="speak"><input type="text" id="speechToText5" placeholder="Please speak to type" name="Image5" required></div>
+                                </div>
+                            </div>
+                            <br><br><br><br>
+                            <div>
+                                <button class="btn btn-primary me-2" type="submit">SUBMIT</button>
+                                <button class="btn btn-danger" type="reset">Reset the form!</button>
+                                
+                            </div>
+                             
+                        </div>   
+                    </div>
+                    <div id="form_alerts"></div>
+                </form>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbx3Ls_krM3iQ2V0b1gpckWVfT7LC92e9ckfPNdKtAAeaDliYoq5k6mrqHTRJlbr-NLiCw/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => $("#form_alerts").html("<div class='alert alert-success'>Answers submitted.</div>"))
+                .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Answers not submitted.</div>"))
+            })
+          </script>
+    </body>
+
+
+</html>
