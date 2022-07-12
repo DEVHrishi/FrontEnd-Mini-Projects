@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700;900&family=Sen:wght@300;701;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Sen', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    margin: 3rem 0;
+}
+
+.container h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: #FFE036;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    font-weight: 701;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+form {
+    margin-top: 2rem;
+    background-color: #FFE036;
+    padding: 2.5rem 2rem 2.5rem;
+}
+
+.user-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
+
+.input-box {
+    display: grid;
+}
+
+.details {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.input-box input {
+    margin-top: 0.2rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: 1px solid #fff;
+    background-color: #FFE036;
+    padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
+}
+
+.button {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.button button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #FFE036;
+    border: none;
+    box-shadow: 2px 5px 11px -3px rgba(0,0,0,0.85);
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 95%;
+        margin-top: 10vh;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container h3 {
+        font-size: 1.2rem;
+    }
+
+    .user-details {
+        grid-template-columns: 1fr;
+        overflow: scroll;
+        max-height: 60vh;
+    }
+
+    .user-details::_webkit-scrollbar {
+        width: 0;
+    }
+
+    form {
+        margin-bottom: 2rem;
+    }
+}
+    
+
+
